@@ -1,1 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#06121c">
+  <meta name="description" content="JARVIS personal AI assistant">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+  <title>J.A.R.V.I.S.</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">J</span><div><strong>J.A.R.V.I.S.</strong><small>PERSONAL INTELLIGENCE SYSTEM</small></div></div>
+      <div class="system-state"><i></i><span id="systemStatus">SYSTEM STANDBY</span></div>
+    </header>
 
+    <section class="hero">
+      <div class="eyebrow">NEURAL INTERFACE <span>•</span> ANDROID EDITION</div>
+      <h1>Good day.</h1>
+      <p class="subheading">All systems are ready when you are.</p>
+
+      <div class="custom-hud-wrap">
+        <img class="custom-hud" src="/jarvis-hud.jpg" alt="Your custom blue JARVIS control dashboard interface">
+        <div class="hud-caption">LIVE SYSTEM DISPLAY · CUSTOM INTERFACE</div>
+      </div>
+      <div class="assistant-state"><span class="pulse"></span><span id="assistantState">AWAITING YOUR COMMAND</span></div>
+      <button id="micButton" class="mic-button" aria-label="Start voice input"><span class="mic-icon">🎙</span></button>
+      <p class="mic-hint">TAP TO SPEAK · OR TYPE BELOW</p>
+    </section>
+
+    <section class="console">
+      <div class="console-head"><span>COMMAND CONSOLE</span><span id="connectionState">CONNECTING…</span></div>
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="message assistant"><span class="speaker">JARVIS</span><p>Systems online. Good day. How may I assist you?</p></div>
+      </div>
+      <form id="chatForm" class="composer">
+        <input id="userInput" autocomplete="off" placeholder="Enter a command…" aria-label="Enter a message">
+        <button type="submit" aria-label="Send message">➤</button>
+      </form>
+      <div class="toolbar">
+        <label class="toggle"><input type="checkbox" id="voiceToggle" checked><span></span> VOICE RESPONSE</label>
+        <button id="clearButton" class="text-button">CLEAR CONVERSATION</button>
+      </div>
+    </section>
+    <footer>J.A.R.V.I.S. <span>·</span> PERSONAL AI SYSTEM <span>·</span> v1.0</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
